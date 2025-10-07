@@ -37,19 +37,23 @@ const About = () => {
                         <div className="flex flex-wrap gap-4 mb-8">
                             <div className="flex items-center gap-2 px-4 py-2 bg-[#00ff88]/10 border border-[#00ff88] rounded-full">
                                 <span className="text-2xl">🎮</span>
-                                <span className="text-[#00ff88] font-semibold">
-                                    Games
-                                </span>
+                                <span className="gaming-label">Games</span>
                             </div>
                             <div className="flex items-center gap-2 px-4 py-2 bg-[#0FF4C6]/10 border border-[#0FF4C6] rounded-full">
                                 <span className="text-2xl">⚡</span>
-                                <span className="text-[#0FF4C6] font-semibold">
+                                <span
+                                    className="gaming-label"
+                                    style={{ color: "#0FF4C6" }}
+                                >
                                     Apps
                                 </span>
                             </div>
                             <div className="flex items-center gap-2 px-4 py-2 bg-[#8B5CF6]/10 border border-[#8B5CF6] rounded-full">
                                 <span className="text-2xl">🛠️</span>
-                                <span className="text-[#8B5CF6] font-semibold">
+                                <span
+                                    className="gaming-label"
+                                    style={{ color: "#8B5CF6" }}
+                                >
                                     Tools
                                 </span>
                             </div>
@@ -69,10 +73,10 @@ const About = () => {
                                     <div className="w-12 h-12 bg-[#00ff88] rounded-full flex items-center justify-center mx-auto mb-3 cyberpunk-glow">
                                         <span className="text-2xl">🚀</span>
                                     </div>
-                                    <h4 className="text-lg font-bold text-[#00ff88] mb-2">
+                                    <h4 className="gaming-title text-lg mb-2">
                                         INNOVATION
                                     </h4>
-                                    <p className="text-sm text-gray-300">
+                                    <p className="gaming-description text-sm">
                                         Cutting-edge blockchain technology
                                     </p>
                                 </div>
@@ -80,10 +84,13 @@ const About = () => {
                                     <div className="w-12 h-12 bg-[#0FF4C6] rounded-full flex items-center justify-center mx-auto mb-3 cyberpunk-glow">
                                         <span className="text-2xl">👥</span>
                                     </div>
-                                    <h4 className="text-lg font-bold text-[#0FF4C6] mb-2">
+                                    <h4
+                                        className="gaming-title text-lg mb-2"
+                                        style={{ color: "#0FF4C6" }}
+                                    >
                                         COMMUNITY
                                     </h4>
-                                    <p className="text-sm text-gray-300">
+                                    <p className="gaming-description text-sm">
                                         Thriving player ecosystem
                                     </p>
                                 </div>
@@ -91,10 +98,13 @@ const About = () => {
                                     <div className="w-12 h-12 bg-[#8B5CF6] rounded-full flex items-center justify-center mx-auto mb-3 cyberpunk-glow">
                                         <span className="text-2xl">🔓</span>
                                     </div>
-                                    <h4 className="text-lg font-bold text-[#8B5CF6] mb-2">
+                                    <h4
+                                        className="gaming-title text-lg mb-2"
+                                        style={{ color: "#8B5CF6" }}
+                                    >
                                         ACCESSIBILITY
                                     </h4>
-                                    <p className="text-sm text-gray-300">
+                                    <p className="gaming-description text-sm">
                                         Easy web3 onboarding
                                     </p>
                                 </div>
@@ -102,10 +112,10 @@ const About = () => {
                                     <div className="w-12 h-12 bg-[#00ff88] rounded-full flex items-center justify-center mx-auto mb-3 cyberpunk-glow">
                                         <span className="text-2xl">🎮</span>
                                     </div>
-                                    <h4 className="text-lg font-bold text-[#00ff88] mb-2">
+                                    <h4 className="gaming-title text-lg mb-2">
                                         FUN
                                     </h4>
-                                    <p className="text-sm text-gray-300">
+                                    <p className="gaming-description text-sm">
                                         Engaging gameplay experiences
                                     </p>
                                 </div>

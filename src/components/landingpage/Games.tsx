@@ -65,20 +65,20 @@ const Games = () => {
                             <div className="space-y-6">
                                 <div className="flex items-center gap-4">
                                     <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full neon-glow"></div>
-                                    <span className="text-lg text-cyan-400">
+                                    <span className="gaming-description text-lg text-cyan-400">
                                         Daily puzzles, leaderboard competitions,
                                         NFT achievements
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full neon-pink-glow"></div>
-                                    <span className="text-lg text-purple-400">
+                                    <span className="gaming-description text-lg text-purple-400">
                                         Play on web - no downloads required
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full neon-yellow-glow"></div>
-                                    <span className="text-lg text-yellow-400">
+                                    <span className="gaming-description text-lg text-yellow-400">
                                         250+ active players and growing
                                     </span>
                                 </div>
@@ -114,10 +114,10 @@ const Games = () => {
                                 />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold mb-3 text-cyan-400">
+                        <h3 className="gaming-title text-xl mb-3 text-cyan-400">
                             LIGHTNING FAST
                         </h3>
-                        <p className="text-gray-400">
+                        <p className="gaming-description">
                             Optimized for speed with gas-efficient gameplay
                         </p>
                     </div>
@@ -138,10 +138,10 @@ const Games = () => {
                                 />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold mb-3 text-purple-400">
+                        <h3 className="gaming-title text-xl mb-3 text-purple-400">
                             VERIFIABLE RESULTS
                         </h3>
-                        <p className="text-gray-400">
+                        <p className="gaming-description">
                             Fair leaderboards with blockchain-verified scores
                         </p>
                     </div>
@@ -162,10 +162,10 @@ const Games = () => {
                                 />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold mb-3 text-yellow-400">
+                        <h3 className="gaming-title text-xl mb-3 text-yellow-400">
                             NFT REWARDS
                         </h3>
-                        <p className="text-gray-400">
+                        <p className="gaming-description">
                             Earn unique tokens and NFTs through gameplay
                         </p>
                     </div>

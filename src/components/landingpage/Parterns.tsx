@@ -47,10 +47,10 @@ const Parterns = () => {
                                 <div className="w-8 h-8 bg-[#00ff88] rounded-full flex items-center justify-center mx-auto mb-3 cyberpunk-glow">
                                     <span className="text-lg">🔗</span>
                                 </div>
-                                <h4 className="text-sm font-bold text-[#00ff88] mb-2">
+                                <h4 className="gaming-title text-sm mb-2">
                                     CHAIN PARTNERSHIPS
                                 </h4>
-                                <p className="text-xs text-gray-400">
+                                <p className="gaming-description text-xs">
                                     Multi-chain integration
                                 </p>
                             </div>
@@ -58,10 +58,13 @@ const Parterns = () => {
                                 <div className="w-8 h-8 bg-[#0ff4c6] rounded-full flex items-center justify-center mx-auto mb-3 cyberpunk-glow">
                                     <span className="text-lg">🏆</span>
                                 </div>
-                                <h4 className="text-sm font-bold text-[#0ff4c6] mb-2">
+                                <h4
+                                    className="gaming-title text-sm mb-2"
+                                    style={{ color: "#0ff4c6" }}
+                                >
                                     TOURNAMENT SPONSORS
                                 </h4>
-                                <p className="text-xs text-gray-400">
+                                <p className="gaming-description text-xs">
                                     Competitive events
                                 </p>
                             </div>
@@ -69,10 +72,13 @@ const Parterns = () => {
                                 <div className="w-8 h-8 bg-[#8b5cf6] rounded-full flex items-center justify-center mx-auto mb-3 cyberpunk-glow">
                                     <span className="text-lg">⚙️</span>
                                 </div>
-                                <h4 className="text-sm font-bold text-[#8b5cf6] mb-2">
+                                <h4
+                                    className="gaming-title text-sm mb-2"
+                                    style={{ color: "#8b5cf6" }}
+                                >
                                     SDK INTEGRATION
                                 </h4>
-                                <p className="text-xs text-gray-400">
+                                <p className="gaming-description text-xs">
                                     Developer tools
                                 </p>
                             </div>
