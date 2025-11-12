@@ -2,115 +2,188 @@ import About from "../components/landingpage/About";
 import Games from "../components/landingpage/Games";
 import Parterns from "../components/landingpage/Parterns";
 import Build from "../components/landingpage/Build";
+import {
+    DiscordIcon,
+    TwitterIcon,
+    ContactIcon,
+} from "../components/BrutalistIcons";
 
 const LandingPage = () => {
     return (
-        <div className="min-h-screen overflow-hidden relative">
-            {/* Neon Grid Background */}
-            <div className="fixed inset-0 neon-grid opacity-30"></div>
+        <div className="min-h-screen overflow-hidden relative bg-black">
+            {/* Hero Section - Brutalist Design */}
+            <section className="relative min-h-screen bg-black overflow-hidden">
+                {/* Brutalist Grid Background */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage: `
+                        linear-gradient(#24AF52 1px, transparent 1px),
+                        linear-gradient(90deg, #24AF52 1px, transparent 1px)
+                    `,
+                        backgroundSize: "40px 40px",
+                        opacity: 0.1,
+                    }}
+                ></div>
 
-            {/* Floating Neon Particles */}
-            <div className="fixed inset-0 pointer-events-none">
-                {[...Array(20)].map((_, i) => (
-                    <div
-                        key={i}
-                        className="neon-particle"
-                        style={{
-                            left: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 10}s`,
-                            animationDuration: `${8 + Math.random() * 4}s`,
-                        }}
-                    ></div>
-                ))}
-            </div>
-
-            {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                {/* Cyberpunk Background */}
-                <div className="absolute inset-0 bg-[url('/assets/images/Hero.png')] bg-cover bg-center bg-no-repeat"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/90"></div>
-                <div className="absolute inset-0 pixel-grid opacity-30"></div>
-
-                {/* Animated cyberpunk elements */}
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00ff88]/30 rounded-full blur-3xl floating-animation cyberpunk-glow"></div>
-                    <div
-                        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#0ff4c6]/30 rounded-full blur-3xl floating-animation"
-                        style={{ animationDelay: "2s" }}
-                    ></div>
-                    <div
-                        className="absolute top-1/2 left-1/2 w-80 h-80 bg-[#8b5cf6]/30 rounded-full blur-3xl floating-animation"
-                        style={{ animationDelay: "4s" }}
-                    ></div>
-
-                    {/* Cyberpunk grid lines */}
-                    <div className="absolute top-0 left-0 w-full h-full">
-                        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#00ff88] to-transparent opacity-50"></div>
-                        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#0ff4c6] to-transparent opacity-50"></div>
-                        <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8b5cf6] to-transparent opacity-50"></div>
-                    </div>
-                </div>
-
-                <div className="container-responsive section-padding relative z-10">
-                    {/* Navigation */}
-                    <nav className="flex justify-between items-center mb-16 fade-in">
-                        <div className="navbar-brand">CRACKED STUDIO</div>
-                        <ul className="hidden md:flex gap-4 text-lg font-medium">
-                            <li className="navbar-menu-item">MENU</li>
-                            <li className="navbar-menu-item">GAMES</li>
-                            <li className="navbar-menu-item">CONTACT</li>
-                        </ul>
-                        <button className="md:hidden navbar-menu-item">
-                            <svg
-                                className="w-6 h-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M4 6h16M4 12h16M4 18h16"
+                <div className="container-responsive relative z-10 min-h-screen flex flex-col">
+                    {/* Navigation - Brutalist */}
+                    <nav className="py-6 border-b-4 border-[#24AF52] mb-8">
+                        <div className="flex justify-between items-center">
+                            <div className="border-4 border-[#24AF52] px-6 py-3 bg-black">
+                                <img
+                                    src="/assets/svg/icon-green-white.svg"
+                                    alt="Cracked Studios"
+                                    className="h-8 w-auto"
                                 />
-                            </svg>
-                        </button>
-                    </nav>
-
-                    {/* Hero Content */}
-                    <div className="text-center max-w-6xl mx-auto">
-                        <h1
-                            className="text-responsive-xl mb-8 fade-in hero-3d-text"
-                            data-text="PLAY. BUILD. BELONG. THAT'S CRACKED."
-                        >
-                            PLAY. BUILD. BELONG.
-                            <br />
-                            <span className="text-responsive-xl">
-                                THAT'S CRACKED.
-                            </span>
-                        </h1>
-                        <p className="text-responsive-base mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed fade-in">
-                            We build web3 games, applications, and tools that
-                            make blockchain fun, seamless, and rewarding. Gaming
-                            is our entry point, but our mission goes beyond play
-                            — we're creating an ecosystem of products that are
-                            simple, engaging, and community-driven.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in">
-                            <button className="explore-btn">
-                                EXPLORE OUR GAMES
-                            </button>
-                            <button className="glass-btn">
-                                DISCOVER OUR TOOLS
+                            </div>
+                            <ul className="hidden md:flex gap-0">
+                                <li className="border-4 border-r-0 border-[#24AF52] px-6 py-3 bg-black text-[#A7DFBA] font-black text-sm uppercase tracking-wider hover:bg-[#24AF52] hover:text-black transition-colors">
+                                    MENU
+                                </li>
+                                <li className="border-4 border-r-0 border-[#24AF52] px-6 py-3 bg-black text-[#A7DFBA] font-black text-sm uppercase tracking-wider hover:bg-[#24AF52] hover:text-black transition-colors">
+                                    GAMES
+                                </li>
+                                <li className="border-4 border-[#24AF52] px-6 py-3 bg-black text-[#A7DFBA] font-black text-sm uppercase tracking-wider hover:bg-[#24AF52] hover:text-black transition-colors">
+                                    CONTACT
+                                </li>
+                            </ul>
+                            <button className="md:hidden border-4 border-[#24AF52] px-4 py-3 bg-black text-[#A7DFBA]">
+                                <svg
+                                    className="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={3}
+                                        d="M4 6h16M4 12h16M4 18h16"
+                                    />
+                                </svg>
                             </button>
                         </div>
-                    </div>
-                </div>
+                    </nav>
 
-                {/* Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                    <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center neon-glow">
-                        <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
+                    {/* Hero Content - Brutalist Grid Layout */}
+                    <div className="flex-1 grid lg:grid-cols-2 gap-4 items-center">
+                        {/* Left Column - Logo & Tagline */}
+                        <div className="space-y-4">
+                            {/* Icon in brutalist box */}
+                            <div className="border-8 border-[#24AF52] p-8 bg-black">
+                                <img
+                                    src="/assets/svg/icon-green-white.svg"
+                                    alt="Cracked Studios Logo"
+                                    className="w-full max-w-xs mx-auto"
+                                />
+                            </div>
+
+                            {/* Wordmark */}
+                            <div className="border-4 border-[#24AF52] p-6 bg-black">
+                                <img
+                                    src="/assets/svg/wordmark-white.svg"
+                                    alt="Cracked Studios"
+                                    className="w-full h-auto"
+                                />
+                            </div>
+
+                            {/* Tagline Box */}
+                            <div className="border-4 border-[#24AF52] p-6 bg-[#24AF52] text-black">
+                                <p className="text-2xl md:text-3xl font-black uppercase tracking-wider">
+                                    WEB3 PRODUCTS COMPANY
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Main Message */}
+                        <div className="space-y-4">
+                            {/* Play Build Belong - Brutalist Typography */}
+                            <div className="border-8 border-[#24AF52] p-8 bg-black relative">
+                                {/* Watermark decoration */}
+                                <div className="absolute top-4 right-4 opacity-10">
+                                    <img
+                                        src="/assets/svg/watermark-black-white.svg"
+                                        alt=""
+                                        className="w-24 h-24"
+                                    />
+                                </div>
+                                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none relative z-10">
+                                    <span className="block text-[#A7DFBA] mb-2">
+                                        PLAY.
+                                    </span>
+                                    <span className="block text-[#24AF52] mb-2">
+                                        BUILD.
+                                    </span>
+                                    <span className="block text-[#1C6833]">
+                                        BELONG.
+                                    </span>
+                                </h1>
+                                <p className="text-3xl md:text-4xl font-black text-white mt-4 relative z-10">
+                                    THAT'S{" "}
+                                    <span className="text-[#24AF52]">
+                                        CRACKED
+                                    </span>
+                                    .
+                                </p>
+                            </div>
+
+                            {/* Description Box */}
+                            <div className="border-4 border-[#24AF52] p-6 bg-black">
+                                <p className="text-lg md:text-xl text-white leading-relaxed font-medium">
+                                    Cracked Studios is a Web3 products company
+                                    bringing{" "}
+                                    <span className="text-[#A7DFBA] font-black">
+                                        fun
+                                    </span>
+                                    ,{" "}
+                                    <span className="text-[#24AF52] font-black">
+                                        simplicity
+                                    </span>
+                                    , and{" "}
+                                    <span className="text-[#1C6833] font-black">
+                                        belonging
+                                    </span>{" "}
+                                    into decentralized technology.
+                                </p>
+                                <p className="text-lg md:text-xl text-white leading-relaxed font-medium mt-4">
+                                    We design games, applications, and tools
+                                    that make Web3 feel less like code and more
+                                    like{" "}
+                                    <span className="text-[#24AF52] font-black">
+                                        culture
+                                    </span>{" "}
+                                    — where everyone can play, build, and
+                                    belong.
+                                </p>
+                            </div>
+
+                            {/* CTA Buttons - Brutalist */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <button className="border-4 border-[#24AF52] px-8 py-4 bg-[#24AF52] text-black font-black text-lg uppercase tracking-wider hover:bg-black hover:text-[#24AF52] transition-colors relative group">
+                                    <span className="relative z-10">
+                                        EXPLORE GAMES
+                                    </span>
+                                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-20 transition-opacity">
+                                        <img
+                                            src="/assets/svg/icon-green-black.svg"
+                                            alt=""
+                                            className="w-8 h-8"
+                                        />
+                                    </div>
+                                </button>
+                                <button className="border-4 border-[#24AF52] px-8 py-4 bg-black text-[#A7DFBA] font-black text-lg uppercase tracking-wider hover:bg-[#24AF52] hover:text-black transition-colors">
+                                    DISCOVER TOOLS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Scroll Indicator - Brutalist */}
+                    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                        <div className="border-4 border-[#24AF52] w-8 h-12 bg-black flex items-center justify-center">
+                            <div className="w-2 h-4 bg-[#24AF52] animate-bounce"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -123,90 +196,202 @@ const LandingPage = () => {
                 <Parterns />
             </div>
 
-            {/* Footer */}
-            <footer className="relative min-h-screen flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/assets/images/Footer.png')] bg-cover bg-center bg-no-repeat"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+            {/* Footer - Brutalist */}
+            <footer className="relative bg-black py-20">
+                <div className="container-responsive">
+                    {/* Main Footer Content */}
+                    <div className="border-8 border-[#24AF52] p-12 mb-8 bg-black relative">
+                        {/* Watermark decoration */}
+                        <div className="absolute top-8 right-8 opacity-5">
+                            <img
+                                src="/assets/svg/watermark-black-white.svg"
+                                alt=""
+                                className="w-32 h-32"
+                            />
+                        </div>
+                        <h2 className="text-5xl md:text-7xl font-black mb-8 text-center relative z-10">
+                            <span className="block text-[#A7DFBA] mb-2">
+                                PLAY.
+                            </span>
+                            <span className="block text-[#24AF52] mb-2">
+                                BUILD.
+                            </span>
+                            <span className="block text-[#1C6833]">
+                                BELONG.
+                            </span>
+                        </h2>
+                        <p className="text-3xl md:text-4xl font-black text-white text-center mb-4 relative z-10">
+                            THAT'S{" "}
+                            <span className="text-[#24AF52]">CRACKED</span>.
+                        </p>
+                    </div>
 
-                <div className="container-responsive section-padding relative z-10 text-center">
-                    <h2
-                        className="text-responsive-xl mb-8 fade-in hero-3d-text"
-                        data-text="PLAY. BUILD. BELONG. THAT'S CRACKED."
-                    >
-                        PLAY. BUILD. BELONG.
-                        <br />
-                        <span className="text-responsive-xl">
-                            THAT'S CRACKED.
-                        </span>
-                    </h2>
-                    <p className="text-responsive-base mb-12 max-w-3xl mx-auto text-gray-300 leading-relaxed fade-in">
-                        Whether you're a gamer exploring blockchain-based fun, a
-                        non-crypto native trying web3 for the first time, or a
-                        web3 builder looking for apps and tools that actually
-                        work - we've got you covered. Join our community and be
-                        part of the web3 revolution.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in mb-12">
-                        <button className="explore-btn">
+                    {/* Description Box */}
+                    <div className="border-4 border-[#24AF52] p-8 mb-8 bg-black">
+                        <p className="text-lg md:text-xl text-white leading-relaxed font-medium text-center max-w-3xl mx-auto">
+                            Whether you're a gamer exploring blockchain-based
+                            fun, a non-crypto native trying web3 for the first
+                            time, or a web3 builder looking for apps and tools
+                            that actually work - we've got you covered. Join our
+                            community and be part of the web3 revolution.
+                        </p>
+                    </div>
+
+                    {/* CTA Buttons */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12">
+                        <button className="border-4 border-[#24AF52] px-8 py-4 bg-[#24AF52] text-black font-black text-lg uppercase tracking-wider hover:bg-black hover:text-[#24AF52] transition-colors">
                             JOIN THE COMMUNITY
                         </button>
-                        <button className="glass-btn">WORK WITH US</button>
+                        <button className="border-4 border-[#24AF52] px-8 py-4 bg-black text-[#A7DFBA] font-black text-lg uppercase tracking-wider hover:bg-[#24AF52] hover:text-black transition-colors">
+                            WORK WITH US
+                        </button>
                     </div>
 
-                    {/* Community Links */}
-                    <div className="flex flex-wrap justify-center gap-8 mb-8">
+                    {/* Community Links - Brutalist */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 max-w-3xl mx-auto">
                         <a
                             href="#"
-                            className="cyberpunk-card p-4 hover:scale-105 transition-transform duration-300"
+                            className="border-4 border-[#24AF52] p-6 bg-black text-center hover:bg-[#24AF52] hover:text-black transition-colors relative group"
                         >
-                            <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 bg-[#00ff88] rounded-full flex items-center justify-center cyberpunk-glow">
-                                    <span className="text-lg">💬</span>
-                                </div>
-                                <span className="text-[#00ff88] font-semibold">
-                                    Discord
-                                </span>
+                            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-30 transition-opacity">
+                                <img
+                                    src="/assets/svg/icon-green-black.svg"
+                                    alt=""
+                                    className="w-6 h-6"
+                                />
                             </div>
+                            <div className="flex justify-center mb-2">
+                                <DiscordIcon
+                                    className="w-10 h-10"
+                                    color="#A7DFBA"
+                                />
+                            </div>
+                            <span className="text-[#A7DFBA] font-black text-lg uppercase tracking-wider hover:text-black">
+                                Discord
+                            </span>
                         </a>
                         <a
                             href="#"
-                            className="cyberpunk-card p-4 hover:scale-105 transition-transform duration-300"
+                            className="border-4 border-[#24AF52] p-6 bg-black text-center hover:bg-[#24AF52] hover:text-black transition-colors relative group"
                         >
-                            <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 bg-[#0ff4c6] rounded-full flex items-center justify-center cyberpunk-glow">
-                                    <span className="text-lg">🐦</span>
-                                </div>
-                                <span className="text-[#0ff4c6] font-semibold">
-                                    Twitter
-                                </span>
+                            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-30 transition-opacity">
+                                <img
+                                    src="/assets/svg/icon-green-black.svg"
+                                    alt=""
+                                    className="w-6 h-6"
+                                />
                             </div>
+                            <div className="flex justify-center mb-2">
+                                <TwitterIcon
+                                    className="w-10 h-10"
+                                    color="#A7DFBA"
+                                />
+                            </div>
+                            <span className="text-[#A7DFBA] font-black text-lg uppercase tracking-wider hover:text-black">
+                                Twitter
+                            </span>
                         </a>
                         <a
                             href="#"
-                            className="cyberpunk-card p-4 hover:scale-105 transition-transform duration-300"
+                            className="border-4 border-[#1C6833] p-6 bg-black text-center hover:bg-[#1C6833] hover:text-white transition-colors relative group"
                         >
-                            <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 bg-[#8b5cf6] rounded-full flex items-center justify-center cyberpunk-glow">
-                                    <span className="text-lg">📧</span>
-                                </div>
-                                <span className="text-[#8b5cf6] font-semibold">
-                                    Contact
-                                </span>
+                            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-30 transition-opacity">
+                                <img
+                                    src="/assets/svg/icon-black-white.svg"
+                                    alt=""
+                                    className="w-6 h-6"
+                                />
                             </div>
+                            <div className="flex justify-center mb-2">
+                                <ContactIcon
+                                    className="w-10 h-10"
+                                    color="#A7DFBA"
+                                />
+                            </div>
+                            <span className="text-[#A7DFBA] font-black text-lg uppercase tracking-wider hover:text-white">
+                                Contact
+                            </span>
                         </a>
                     </div>
 
-                    <div className="mt-16 pt-8 border-t border-[#00ff88]/30">
-                        <p className="text-[#00ff88]">
+                    {/* Copyright */}
+                    <div className="border-t-4 border-[#24AF52] pt-8 text-center">
+                        <p className="text-[#24AF52] font-black text-lg uppercase mb-2">
                             © 2024 CRACKED STUDIOS. ALL RIGHTS RESERVED.
                         </p>
-                        <p className="text-gray-400 mt-2">
+                        <p className="text-white font-medium">
                             Making web3 fun, simple, and rewarding for everyone.
                         </p>
                     </div>
                 </div>
             </footer>
+
+            {/* Brutalist Styles & Font System */}
+            <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Bungee+Shade&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        
+        * {
+          font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        }
+        
+        /* Display/Heading Fonts - Geometric, Futuristic, Tech-Inspired */
+        h1, h2, h3, h4, h5, h6, .font-brutal, .font-display {
+          font-family: 'Orbitron', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+        
+        /* Extra bold headings */
+        .font-black, h1, h2 {
+          font-weight: 900;
+        }
+        
+        /* Playful cracked feel for special headings - Bungee Shade */
+        .font-cracked, .font-playful {
+          font-family: 'Bungee Shade', 'Orbitron', 'Space Grotesk', sans-serif;
+          font-weight: 400;
+          letter-spacing: 0.1em;
+        }
+        
+        /* Retro pixel/hacking edge - Press Start 2P */
+        .font-pixel, .font-retro {
+          font-family: 'Press Start 2P', 'Orbitron', 'Space Grotesk', sans-serif;
+          font-weight: 400;
+          letter-spacing: 0.05em;
+          line-height: 1.6;
+        }
+        
+        /* Body text - Space Grotesk for readability */
+        p, span, li, a, button, .font-body {
+          font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+          font-weight: 400;
+          letter-spacing: -0.01em;
+        }
+        
+        /* Medium weight for emphasis */
+        .font-medium {
+          font-weight: 500;
+        }
+        
+        /* Strong/bold body text */
+        strong, b, .font-bold {
+          font-weight: 700;
+        }
+        
+        /* Utility classes */
+        .container-responsive { 
+          padding-left: 1.25rem; 
+          padding-right: 1.25rem; 
+          max-width: 1180px; 
+          margin-left: auto; 
+          margin-right: auto; 
+        }
+        .section-padding { 
+          padding-top: 4rem; 
+          padding-bottom: 4rem; 
+        }
+      `}</style>
         </div>
     );
 };

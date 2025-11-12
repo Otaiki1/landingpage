@@ -759,3 +759,176 @@ body {
         transform: translate(50px, 50px);
     }
 }
+
+/* Cracked Glass Effects */
+.cracked-glass-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/assets/images/CrackedGlass.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cracked-glass-texture {
+    position: relative;
+    overflow: hidden;
+}
+
+.cracked-glass-texture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/assets/images/CrackedGlass.png");
+    background-size: 200% 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+    animation: crackedGlassShift 8s ease-in-out infinite;
+}
+
+.cracked-glass-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #00ff88, #0ff4c6, #8b5cf6, #00ff88)
+        border-box;
+    background-clip: padding-box;
+    border-radius: 15px;
+}
+
+.cracked-glass-border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ff88, #0ff4c6, #8b5cf6, #00ff88);
+    border-radius: 17px;
+    z-index: -1;
+    mask: url("/assets/images/CrackedGlass.png") no-repeat center;
+    mask-size: 100% 100%;
+    opacity: 0.6;
+}
+
+.cracked-glass-card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.cracked-glass-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/assets/images/CrackedGlass.png");
+    background-size: 150% 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cracked-glass-navbar {
+    position: relative;
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.cracked-glass-navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/assets/images/CrackedGlass.png");
+    background-size: 300% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes crackedGlassShift {
+    0%,
+    100% {
+        background-position: 0% 0%;
+        transform: scale(1);
+    }
+    25% {
+        background-position: 25% 25%;
+        transform: scale(1.02);
+    }
+    50% {
+        background-position: 50% 50%;
+        transform: scale(1.05);
+    }
+    75% {
+        background-position: 75% 75%;
+        transform: scale(1.02);
+    }
+}
+
+.cracked-glass-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.cracked-glass-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/assets/images/CrackedGlass.png");
+    background-size: 120% 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 2;
+    animation: crackedGlassFloat 12s ease-in-out infinite;
+}
+
+@keyframes crackedGlassFloat {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.2;
+    }
+    33% {
+        transform: translateY(-10px) rotate(1deg);
+        opacity: 0.25;
+    }
+    66% {
+        transform: translateY(5px) rotate(-1deg);
+        opacity: 0.15;
+    }
+}
