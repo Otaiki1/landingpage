@@ -93,6 +93,27 @@ const Games = () => {
                                     <span className="relative z-10">VIEW PREVIEW</span>
                                 </a>
                             </div>
+
+                            <div className="border-2 border-[#16A349] p-4 bg-black glitch-box relative overflow-hidden">
+                                <div className="absolute inset-0 glitch-scan"></div>
+                                <div className="border-2 border-[#16A349] p-2 mb-3 bg-[#16A349] text-black text-center relative z-10">
+                                    <p className="font-black text-xs uppercase">PLAYABLE</p>
+                                </div>
+                                <h4 className="text-xl font-black mb-2 text-[#16A349] uppercase relative z-10">NEON SENTINEL</h4>
+                                <p className="text-[#F2F2F2] text-sm font-medium mb-4 relative z-10">
+                                    A Competitive On-Chain Arcade Experience Built on Avalanche. Verifiable Integrity.
+                                </p>
+                                <a
+                                    href="/neon-sentinel"
+                                    className="block w-full border-2 border-[#16A349] px-4 py-3 bg-[#16A349] text-black font-black text-xs uppercase tracking-wider glitch-button relative group overflow-hidden text-center"
+                                >
+                                    <div className="absolute inset-0 glitch-scan"></div>
+                                    <span className="relative z-10">NEON SENTINEL AVALANCHE PITCH DECK</span>
+                                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-20 transition-opacity">
+                                        <img src="/assets/svg/icon-green-black.svg" alt="" className="w-4 h-4" />
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
