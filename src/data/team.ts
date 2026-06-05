@@ -10,7 +10,7 @@ export const team: TeamMember[] = [
     {
         name: "Abdulsamad Sadiq",
         title: "Founder · Product & Community",
-        bio: "Shipped Tweetle, Blokaz, and Kudina (Gates Foundation-sponsored). Grew Cracked Studios' community from zero. Mentor to 100+ developers across Africa via bootcamps, YouTube, and live workshops. Lagos Business School alumni.",
+        bio: "Shipped Tweetle and Blokaz. ETHGlobal hackathon winner. Grew Cracked Studios' community from zero. Mentor to 100+ developers across Africa via bootcamps, YouTube, and live workshops.",
         chains: ["Celo", "Starknet", "Base"],
         initials: "AS",
     },

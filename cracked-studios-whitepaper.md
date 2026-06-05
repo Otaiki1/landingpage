@@ -702,14 +702,8 @@ At Cracked Studios, Samuel owns Noah, Otterpay, and Blokaz as core developer and
 
 ---
 
-**Manoah Luka — Engineering**
-Backend and blockchain developer. Core engineer across the Cracked Studios product portfolio. Blockchain community educator at Starknet Africa.
-
-**Caleb Peterson — Design & Growth**
-Product designer and brand lead. Responsible for the visual identity and marketing execution across the Cracked Studios portfolio.
-
 **What makes this team unusual:**
-One founder, one co-founder, and two core team members — simultaneously shipping across five chains, two product categories, and three live deployments. Samuel alone has deployed contracts to Starknet Mainnet (Otterpay), Starknet Testnet (Noah), Avalanche (Noah), and Celo Mainnet (Blokaz). Most teams at this stage are still on their first chain. Cracked Studios has:
+One founder and one co-founder — simultaneously shipping across five chains, two product categories, and three live deployments. Samuel alone has deployed contracts to Starknet Mainnet (Otterpay), Starknet Testnet (Noah), Avalanche (Noah), and Celo Mainnet (Blokaz). Most teams at this stage are still on their first chain. Cracked Studios has:
 
 | Shipped / Live | Category | Chain |
 |----------------|----------|-------|
@@ -725,7 +719,7 @@ This range — from consumer gaming to zero-knowledge cryptography to on-chain p
 **Collective Track Record:**
 - **7th Place, Privacy Track — Starknet Re{define} Hackathon 2025** (Noah Protocol)
 - **Top 100 product — Avalanche Build Game for Founders** (Noah Protocol)
-- **Gates Foundation-sponsored product** (Kudina) shipped at hackathon stage
+- **ETHGlobal hackathon winner** (Abdulsamad Sadiq)
 - Live contracts on five chains: Celo, Base, Starknet Mainnet, Somnia, and Avalanche
 - 100+ developers mentored across African bootcamps, physical workshops, and YouTube resources
 - Active presence in BlockheaderWeb3, BlockFuseLabs, GuildAudits, and Starknet Africa

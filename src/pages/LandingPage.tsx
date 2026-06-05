@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import CountUpValue from "../components/CountUpValue";
-import WhitepaperModal from "../components/WhitepaperModal";
 import ProductsShowcase from "../components/landingpage/ProductsShowcase";
 import RigShowcase from "../components/landingpage/RigShowcase";
 import ProofOfWork from "../components/landingpage/ProofOfWork";
@@ -18,7 +17,6 @@ const heroStats = [
 const heroSignals = ["Vanta", "Flare", "Prism", "Forge", "Echo", "Spark"];
 
 const LandingPage = () => {
-    const [isWhitepaperOpen, setIsWhitepaperOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -62,26 +60,12 @@ const LandingPage = () => {
                                         {link.label}
                                     </a>
                                 ))}
-                                <button
-                                    type="button"
-                                    onClick={() => setIsWhitepaperOpen(true)}
-                                    className="border-2 border-[#16A349] px-4 py-3 bg-black text-[#00FF66] font-black text-sm uppercase tracking-wider glitch-text-hover"
-                                >
-                                    Whitepaper
-                                </button>
                             </div>
 
                             <div className="hidden lg:flex items-center gap-4">
                                 <span className={`text-[#F2F2F2] text-xs uppercase tracking-[0.25em] font-mono transition-opacity duration-300 ${isScrolled ? "opacity-100" : "opacity-70"}`}>
                                     Play. Build. Belong.
                                 </span>
-                                <button
-                                    type="button"
-                                    onClick={() => setIsWhitepaperOpen(true)}
-                                    className="border-2 border-[#16A349] px-5 py-3 bg-black text-[#00FF66] font-black text-sm uppercase tracking-wider glitch-button glitch-button-outline"
-                                >
-                                    View Whitepaper
-                                </button>
                             </div>
 
                             <button
@@ -108,16 +92,6 @@ const LandingPage = () => {
                                         {link.label}
                                     </a>
                                 ))}
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        setIsMobileOpen(false);
-                                        setIsWhitepaperOpen(true);
-                                    }}
-                                    className="border-2 border-[#16A349] px-4 py-3 bg-black text-[#00FF66] font-black text-sm uppercase tracking-wider text-left"
-                                >
-                                    Whitepaper
-                                </button>
                             </div>
                         ) : null}
                     </nav>
@@ -227,14 +201,6 @@ const LandingPage = () => {
                                     <div className="absolute inset-0 glitch-scan"></div>
                                     <span className="relative z-10">EXPLORE PRODUCTS</span>
                                 </a>
-                                <button
-                                    type="button"
-                                    onClick={() => setIsWhitepaperOpen(true)}
-                                    className="border-2 border-[#16A349] px-8 py-4 bg-black text-[#00FF66] font-black text-lg uppercase tracking-wider glitch-button glitch-button-outline relative overflow-hidden"
-                                >
-                                    <div className="absolute inset-0 glitch-scan"></div>
-                                    <span className="relative z-10">READ THE WHITEPAPER</span>
-                                </button>
                             </div>
 
                             <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
@@ -335,13 +301,6 @@ const LandingPage = () => {
                                         <DiscordIcon className="w-5 h-5" color="currentColor" />
                                         Contact
                                     </a>
-                                    <button
-                                        type="button"
-                                        onClick={() => setIsWhitepaperOpen(true)}
-                                        className="text-left text-[#F2F2F2] font-medium hover:text-[#00FF66]"
-                                    >
-                                        View Whitepaper
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -358,10 +317,6 @@ const LandingPage = () => {
                 </div>
             </footer>
 
-            <WhitepaperModal
-                open={isWhitepaperOpen}
-                onClose={() => setIsWhitepaperOpen(false)}
-            />
 
             <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Orbitron:wght@400;500;600;700;800;900&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap');
