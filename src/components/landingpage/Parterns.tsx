@@ -119,7 +119,7 @@ const Parterns = () => {
                         </div>
 
                         <a
-                            href="mailto:crackedstudios@crackedstudios.xyz"
+                            href="mailto:support@crackedstudios.xyz"
                             className="w-full border-2 border-[#16A349] px-8 py-4 bg-[#16A349] text-black font-black text-lg uppercase tracking-wider glitch-button relative group overflow-hidden text-center"
                         >
                             <div className="absolute inset-0 glitch-scan"></div>
@@ -204,7 +204,7 @@ const Parterns = () => {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto relative z-10">
                         <a
-                            href="mailto:crackedstudios@crackedstudios.xyz"
+                            href="mailto:support@crackedstudios.xyz"
                             className="border-2 border-[#16A349] px-8 py-4 bg-[#16A349] text-black font-black text-lg uppercase tracking-wider glitch-button relative group overflow-hidden text-center"
                         >
                             <div className="absolute inset-0 glitch-scan"></div>

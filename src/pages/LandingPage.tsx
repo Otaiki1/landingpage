@@ -297,9 +297,14 @@ const LandingPage = () => {
                                     <a href="https://t.me/+sRQ1KKINUzlhZjc8" target="_blank" rel="noopener noreferrer" className="text-[#F2F2F2] font-medium hover:text-[#00FF66]">
                                         Telegram
                                     </a>
-                                    <a href="mailto:crackedstudios@crackedstudios.xyz" className="flex items-center gap-3 text-[#F2F2F2] font-medium hover:text-[#00FF66]">
-                                        <DiscordIcon className="w-5 h-5" color="currentColor" />
-                                        Contact
+                                    <a href="mailto:support@crackedstudios.xyz" className="text-[#F2F2F2] font-medium hover:text-[#00FF66]">
+                                        support@crackedstudios.xyz
+                                    </a>
+                                    <a href="mailto:otaiki@crackedstudios.xyz" className="text-[#F2F2F2] font-medium hover:text-[#00FF66]">
+                                        otaiki@crackedstudios.xyz
+                                    </a>
+                                    <a href="mailto:eagle@crackedstudios.xyz" className="text-[#F2F2F2] font-medium hover:text-[#00FF66]">
+                                        eagle@crackedstudios.xyz
                                     </a>
                                 </div>
                             </div>
