@@ -5,7 +5,7 @@ import RigShowcase from "../components/landingpage/RigShowcase";
 import ProofOfWork from "../components/landingpage/ProofOfWork";
 import HumanTeam from "../components/landingpage/HumanTeam";
 import MarketOpportunity from "../components/landingpage/MarketOpportunity";
-import { DiscordIcon, TwitterIcon } from "../components/BrutalistIcons";
+import { TwitterIcon } from "../components/BrutalistIcons";
 
 const heroStats = [
     { value: 5, label: "Live Products", prefix: "", suffix: "" },
